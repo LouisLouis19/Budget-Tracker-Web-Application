@@ -3,7 +3,9 @@
 </div>
 
 <section class="total-budget">
-  <h2 class="positive">1000</h2>
+  <h2 [ngClass]="{ positive: overallFunds > 0, negative: overallFunds < 0 }">
+    {{ overallFunds }}
+  </h2>
 </section>
 
 <section class="add-item">
@@ -15,7 +17,7 @@
   </div>
 </section>
 
-<hr style="margin-top: 0" />
+<hr style="margin-top: 5px" />
 
 <app-income-expense-list
   [budgetItems]="budgetItems"

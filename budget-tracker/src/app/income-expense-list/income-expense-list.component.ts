@@ -11,6 +11,7 @@ export class IncomeExpenseListComponent implements OnInit {
   @Output() delete: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
 
   constructor() {}
+
   ngOnInit(): void {}
 
   onDeleteButtonClicked(item: BudgetItem) {
